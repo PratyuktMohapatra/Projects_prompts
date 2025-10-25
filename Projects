@@ -1,0 +1,35 @@
+{
+  "project_name": "High Availability Database Setup for Monitoring Automation",
+  "company_context": "Automation scripts were executed on approximately 550 applications for continuous monitoring. These scripts inserted data into a centralized MySQL standalone server.",
+  "problem_statement": "The single MySQL server created a single point of failure, risking downtime and performance issues during high data load from automation scripts.",
+  "objective": "Implement a high-availability and fault-tolerant database system to ensure continuous data ingestion and reporting availability.",
+  "solution_implemented": {
+    "database_cluster": "Installed and configured Percona XtraDB Cluster on three Virtual Machines (VMs) to achieve database high availability and data redundancy.",
+    "load_balancing": "Configured HAProxy on two VMs to distribute database traffic and ensure failover capability.",
+    "virtual_ip_setup": {
+      "execution_database_vip": "Assigned one Virtual IP (VIP) for handling automation execution database writes.",
+      "reports_database_vip": "Assigned another Virtual IP (VIP) for handling reporting database reads."
+    }
+  },
+  "improvements_over_standalone_mysql": {
+    "availability": "Increased from approximately 90% uptime to 99.95% uptime, due to clustering and failover support.",
+    "fault_tolerance": "Improved by nearly 100%, as node failures no longer cause downtime or data loss.",
+    "read_write_performance": "Improved by around 40%, with parallel query handling and load balancing via HAProxy.",
+    "data_consistency": "Achieved 100% real-time synchronization across all nodes using synchronous replication.",
+    "maintenance_downtime_reduction": "Reduced planned maintenance downtime by approximately 85%, as operations can continue on other nodes."
+  },
+  "result": "Achieved high availability for both execution and reporting databases, eliminated single point of failure, and ensured stable data flow from automation scripts across 550 monitored applications.",
+  "technologies_used": [
+    "MySQL",
+    "Percona XtraDB Cluster",
+    "HAProxy",
+    "Linux (VM-based deployment)"
+  ],
+  "role": "Database & Backend Developer",
+  "key_responsibilities": [
+    "Configured and deployed Percona XtraDB Cluster across three VMs.",
+    "Set up HAProxy with dual VIP configuration for execution and reporting databases.",
+    "Tested high-availability and failover scenarios to ensure reliability.",
+    "Collaborated with automation team to verify continuous data ingestion after migration."
+  ]
+}
