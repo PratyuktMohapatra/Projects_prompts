@@ -1,5 +1,7 @@
+PROJECT 1
+
 {
-  "project_name": "High Availability Database Setup for Monitoring Automation",
+  "project_name": "Percona Xtraa DB CLuster Set up",
   "company_context": "Automation scripts were executed on approximately 550 applications for continuous monitoring. These scripts inserted data into a centralized MySQL standalone server.",
   "problem_statement": "The single MySQL server created a single point of failure, risking downtime and performance issues during high data load from automation scripts.",
   "objective": "Implement a high-availability and fault-tolerant database system to ensure continuous data ingestion and reporting availability.",
@@ -10,7 +12,8 @@
       "execution_database_vip": "Assigned one Virtual IP (VIP) for handling automation execution database writes.",
       "reports_database_vip": "Assigned another Virtual IP (VIP) for handling reporting database reads."
     },
-    "performance_tuning": "Performed fine-tuning of Percona XtraDB Cluster parameters (such as buffer pool size, write set replication, and flow control) according to workload and performance requirements to optimize stability, throughput, and latency."
+    "performance_tuning": "Performed fine-tuning of Percona XtraDB Cluster parameters (such as buffer pool size, write set replication, and flow control) according to workload and performance requirements to optimize stability, throughput, and latency.",
+    "monitoring_and_observability": "Set up Percona Monitoring and Management (PMM) for real-time visualization and monitoring of cluster health, query performance, node latency, and replication lag to proactively detect and resolve issues."
   },
   "improvements_over_standalone_mysql": {
     "availability": "Increased from approximately 90% uptime to 99.95% uptime, due to clustering and failover support.",
@@ -24,6 +27,7 @@
     "MySQL",
     "Percona XtraDB Cluster",
     "HAProxy",
+    "Percona Monitoring and Management (PMM)",
     "Linux (VM-based deployment)"
   ],
   "role": "Database & Backend Developer",
@@ -31,10 +35,14 @@
     "Configured and deployed Percona XtraDB Cluster across three VMs.",
     "Performed fine-tuning of cluster parameters based on workload and performance requirements.",
     "Set up HAProxy with dual VIP configuration for execution and reporting databases.",
+    "Installed and configured Percona Monitoring and Management (PMM) for monitoring cluster performance and availability.",
     "Tested high-availability and failover scenarios to ensure reliability.",
     "Collaborated with automation team to verify continuous data ingestion after migration."
   ]
 }
+
+PROJECT 2
+
 {
   "project_name": "K-Batch-Ops",
   "project_description": "An automated, on-demand containerized execution system for running and visually monitoring automation scripts using Kubernetes and Flask.",
@@ -76,8 +84,11 @@
     "resource_utilization": "Improved by 70% through dynamic provisioning and cleanup."
   }
 }
+
+PROJECT 3
+
 {
-  "project_name": "Netraa LH Monitoring Setup for National Security Depository Limited (NSDL)",
+  "project_name": "Netraa LH Implementation for National Security Depository Limited (NSDL)",
   "client": "National Security Depository Limited (NSDL)",
   "project_description": "Deployed and configured the Netraa LH monitoring application for NSDL, implementing a full-stack monitoring and automation infrastructure using Docker, Jenkins, and MySQL.",
   "company_context": "The client required continuous monitoring of their critical web applications to ensure high availability, performance, and reliability. Netraa LH, an in-house monitoring solution, was used for this purpose.",
