@@ -35,3 +35,44 @@
     "Collaborated with automation team to verify continuous data ingestion after migration."
   ]
 }
+{
+  "project_name": "K-Batch-Ops",
+  "project_description": "An automated, on-demand containerized execution system for running and visually monitoring automation scripts using Kubernetes and Flask.",
+  "company_context": "Developers in the automation team required an isolated, scalable environment to execute automation scripts for monitoring web applications and observe the execution in real time.",
+  "problem_statement": "Automation scripts were previously executed manually or on shared servers, leading to resource conflicts, limited scalability, and lack of live monitoring capability.",
+  "objective": "Design a dynamic, container-based execution system that automatically provisions environments on demand, runs automation scripts, enables live execution viewing, and cleans up resources post-execution.",
+  "solution_implemented": {
+    "api_trigger": "A REST API endpoint was developed using Flask, deployed with Gunicorn, which initiates the entire workflow when triggered by a developer.",
+    "dynamic_pod_creation": "Upon API hit, the Flask application creates a Kubernetes Pod using a custom Docker image that includes a VNC display server and all dependencies required to run the automation JAR.",
+    "custom_docker_image": "The image contains pre-installed dependencies, browsers, and the automation JAR execution environment.",
+    "live_execution_monitoring": "When the Pod starts, a VNC service is exposed, and Remmina on the developer’s laptop auto-connects to the Pod’s VNC port to allow real-time viewing of the automation execution.",
+    "service_creation_and_cleanup": "A Kubernetes Service is created dynamically for Pod access, and after execution completion and data insertion into the database, both the Pod and the Service are automatically deleted.",
+    "automation_trigger": "Inside the Pod, the automation JAR is triggered, executing the monitoring scripts for the target web applications."
+  },
+  "workflow_summary": "Developer → Hits API → Gunicorn triggers Flask app → Flask creates Pod + Service → Pod runs automation JAR → Remmina connects to VNC for live monitoring → On completion, results stored in DB → Pod, Service, and Remmina session terminated.",
+  "result": "Enabled on-demand, isolated, and fully automated execution of monitoring scripts with live viewing. Reduced manual intervention by 100%, eliminated shared resource issues, and improved environment setup time by approximately 90%.",
+  "technologies_used": [
+    "Python Flask",
+    "Gunicorn",
+    "Docker",
+    "Kubernetes",
+    "VNC (Remmina)",
+    "Java (Automation JAR)",
+    "MySQL"
+  ],
+  "role": "Backend & DevOps Developer",
+  "key_responsibilities": [
+    "Developed Flask API to automate Pod creation, execution, and cleanup.",
+    "Built custom Docker image with VNC server and required automation dependencies.",
+    "Integrated Flask with Kubernetes APIs for dynamic Pod and Service management.",
+    "Automated live monitoring setup using Remmina for VNC connections.",
+    "Optimized execution flow to automatically delete Pods and Services after completion.",
+    "Ensured automation results were stored in the database before cleanup."
+  ],
+  "performance_impact": {
+    "environment_setup_time_reduction": "Reduced from ~5 minutes to under 30 seconds (≈90% improvement).",
+    "manual_intervention": "Eliminated 100% of manual execution and monitoring setup.",
+    "system_scalability": "Enabled parallel execution of multiple isolated automation jobs without conflict.",
+    "resource_utilization": "Improved by 70% through dynamic provisioning and cleanup."
+  }
+}
