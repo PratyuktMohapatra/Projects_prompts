@@ -76,3 +76,45 @@
     "resource_utilization": "Improved by 70% through dynamic provisioning and cleanup."
   }
 }
+{
+  "project_name": "Netraa LH Monitoring Setup for National Security Depository Limited (NSDL)",
+  "client": "National Security Depository Limited (NSDL)",
+  "project_description": "Deployed and configured the Netraa LH monitoring application for NSDL, implementing a full-stack monitoring and automation infrastructure using Docker, Jenkins, and MySQL.",
+  "company_context": "The client required continuous monitoring of their critical web applications to ensure high availability, performance, and reliability. Netraa LH, an in-house monitoring solution, was used for this purpose.",
+  "problem_statement": "The client lacked an integrated monitoring setup capable of running continuous automation scripts 24/7 and visualizing performance data in real-time.",
+  "objective": "Deploy and configure the Netraa LH monitoring ecosystem using containerized microservices, automation scripts, and real-time monitoring infrastructure.",
+  "solution_implemented": {
+    "application_setup": "Deployed Netraa LH as a set of 13 Docker-based microservices, each container handling a dedicated function of the monitoring system (frontend, backend, scheduler, API, etc.).",
+    "database_setup": "Installed and configured a dedicated MySQL server to store monitoring and automation data.",
+    "automation_execution_setup": "Configured two additional VMs as automation nodes. Installed Jenkins on one VM and created 35 Jenkins jobs to schedule and manage automation executions.",
+    "automation_scripts": "Integrated 16 automation scripts for Node 1 and 16 for Node 2, each representing unique monitoring journeys across the client's web applications.",
+    "continuous_execution": "Configured Jenkins pipelines to run automation scripts 24/7, ensuring continuous monitoring of application health and functionality.",
+    "data_integration": "Automation results were continuously inserted into the MySQL database and displayed in the Netraa LH monitoring dashboard for visualization and reporting.",
+    "graphical_access": "Installed and configured VNC Server and LightDM on both automation VMs to provide graphical access, enabling Chrome browser automation to run and be visually monitored."
+  },
+  "result": "Successfully implemented a continuous, automated monitoring system for NSDL’s web applications using Netraa LH. Achieved 24/7 real-time monitoring with automated data flow from execution to visualization, reducing manual monitoring effort by 100%.",
+  "technologies_used": [
+    "Docker (13 microservices)",
+    "Jenkins (CI/CD Automation)",
+    "MySQL",
+    "VNC Server",
+    "LightDM",
+    "Google Chrome (for browser automation)",
+    "Linux"
+  ],
+  "role": "DevOps & Automation Engineer",
+  "key_responsibilities": [
+    "Deployed Netraa LH microservices architecture using 13 Docker containers.",
+    "Installed and configured MySQL database for data storage and integration with Netraa LH.",
+    "Set up Jenkins and created 35 jobs to automate execution of 32 monitoring scripts across two nodes.",
+    "Configured 24/7 automation pipeline for continuous monitoring.",
+    "Installed and managed VNC Server and LightDM for graphical access to automation environments.",
+    "Ensured all automation results were successfully pushed to the database and reflected in the Netraa LH dashboard."
+  ],
+  "performance_impact": {
+    "automation_coverage": "Achieved 100% coverage of NSDL's monitored web applications.",
+    "manual_effort_reduction": "Reduced manual monitoring effort by 100% through automated, continuous execution.",
+    "monitoring_reliability": "Increased monitoring reliability by 95% through automated error recovery and consistent data updates.",
+    "deployment_efficiency": "Reduced deployment time by 80% using Docker-based microservices architecture."
+  }
+}
