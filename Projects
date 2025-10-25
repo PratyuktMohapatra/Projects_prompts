@@ -9,7 +9,8 @@
     "virtual_ip_setup": {
       "execution_database_vip": "Assigned one Virtual IP (VIP) for handling automation execution database writes.",
       "reports_database_vip": "Assigned another Virtual IP (VIP) for handling reporting database reads."
-    }
+    },
+    "performance_tuning": "Performed fine-tuning of Percona XtraDB Cluster parameters (such as buffer pool size, write set replication, and flow control) according to workload and performance requirements to optimize stability, throughput, and latency."
   },
   "improvements_over_standalone_mysql": {
     "availability": "Increased from approximately 90% uptime to 99.95% uptime, due to clustering and failover support.",
@@ -28,6 +29,7 @@
   "role": "Database & Backend Developer",
   "key_responsibilities": [
     "Configured and deployed Percona XtraDB Cluster across three VMs.",
+    "Performed fine-tuning of cluster parameters based on workload and performance requirements.",
     "Set up HAProxy with dual VIP configuration for execution and reporting databases.",
     "Tested high-availability and failover scenarios to ensure reliability.",
     "Collaborated with automation team to verify continuous data ingestion after migration."
