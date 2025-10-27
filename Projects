@@ -150,7 +150,13 @@ PROJECT 3
     "GitHub",
     "VirtualBox",
     "VMware",
-    "Bash"
+    "Bash",
+    "Percona XtraDB Cluster",
+    "x11vnc",
+    "LightDM",
+    "MySQL Server",
+    "Trivy",
+    "Harbor"
   ]
 }
 
