@@ -129,3 +129,28 @@ PROJECT 3
     "deployment_efficiency": "Reduced deployment time by 80% using Docker-based microservices architecture."
   }
 }
+
+
+{
+  "technologies": [
+    "Linux",
+    "Docker",
+    "Jenkins",
+    "Kubernetes",
+    "Ansible",
+    "AWS",
+    "Azure",
+    "Proxmox",
+    "Sophos",
+    "CloudStack",
+    "Java",
+    "Python",
+    "Git",
+    "GitLab",
+    "GitHub",
+    "VirtualBox",
+    "VMware",
+    "Bash"
+  ]
+}
+
